@@ -46,20 +46,22 @@ public class Baraja {
 	
 	private void construirBaraja() {
 		
+		
+		int posicion =0;
 		for(int i=0;i<13;i++) {		
-			Cartas[i] = crearCarta(i+1,'C');
+			Cartas[posicion++] = crearCarta(i+1,'C');
 		}
 		
 		for(int i=0;i<13;i++) {		
-			Cartas[13+i] = crearCarta(i+1,'P');
+			Cartas[posicion++] = crearCarta(i+1,'P');
 		}
 	
 		for(int i=0;i<13;i++) {		
-			Cartas[26+i] = crearCarta(i+1,'T');
+			Cartas[posicion++] = crearCarta(i+1,'T');
 		}
 		
 		for(int i=0;i<13;i++) {		
-			Cartas[39+i] = crearCarta(i+1,'D');
+			Cartas[posicion++] = crearCarta(i+1,'D');
 		}
 	}
 	
