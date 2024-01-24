@@ -9,12 +9,8 @@ public class Start {
 		
 		Carta carta = new Carta();
 		
+		baraja.voltearCarta('A', 'T');
 		
-		System.out.println("----------");
-		
-	
-		
-		System.out.println(carta);
 		
 	}
 

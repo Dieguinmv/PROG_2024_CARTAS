@@ -4,7 +4,7 @@ public class Carta {
 	
 	private char valor;
 	private char palo;
-	private boolean bocaArriba;
+	private boolean bocaArriba= true;
 	
 	
 	

@@ -13,7 +13,7 @@ public class Baraja {
 		
 		construirBaraja();
 			
-		Cartas[0].voltear();
+		
 			
 		}
 		
@@ -74,9 +74,16 @@ public class Baraja {
 
 	
 	public void voltearCarta(char valor, char palo) {
+	
+		System.out.println(buscarCarta(valor,palo));
+		System.out.println(buscarIndiceCarta(valor,palo));
 		
 	}
 		
+	
+	
+	
+	
 	/**
 	 * Esta operacion busca una carta y devuelve el objeto carta que se encuntra en el vector
 	 * 
@@ -106,7 +113,25 @@ public class Baraja {
 		
 	}
 	
+private int buscarIndiceCarta(char valor,char palo) {
 		
+		int devolver = -1;
+		int i = 0;
+		boolean encontrado = false;
+		
+		while((i<Cartas.length) && (!encontrado)) {
+			
+			if(Cartas[i].getValor()== valor && Cartas[i].getPalo()==palo) {
+				encontrado = true;
+				devolver = i;
+			}
+			
+			i++;
+		}
+		
+		return devolver;
+		
+	}	
 	
 	
 	
