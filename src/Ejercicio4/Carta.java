@@ -4,16 +4,34 @@ public class Carta {
 	
 	private char valor;
 	private char palo;
-	
+	private boolean bocaArriba;
 	
 	
 	
 
+	public Carta() {
+		
+		bocaArriba = false;
+	}
 
+	
 
+	
+	public void voltear() {
+		bocaArriba = !bocaArriba;
+	}
+	
 	@Override
 	public String toString() {
-		return  "["+valor + palo + "]";
+		String devolver =   "["+valor + palo;
+		
+		if(bocaArriba) {
+			devolver += "]";
+		}
+		
+		else devolver += "*]";
+		
+		return devolver;
 	}
 
 
@@ -33,6 +51,16 @@ public class Carta {
 	public void setPalo(char palo) {
 		this.palo = palo;
 	}
+
+
+	public boolean isBocaArriba() {
+		return bocaArriba;
+	}
+
+	public void setBocaArriba(boolean bocaArriba) {
+		this.bocaArriba = bocaArriba;
+	}
+	
 	
 	
 }

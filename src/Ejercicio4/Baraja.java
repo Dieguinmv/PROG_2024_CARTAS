@@ -13,7 +13,7 @@ public class Baraja {
 		
 		construirBaraja();
 			
-			
+		Cartas[0].voltear();
 			
 		}
 		
@@ -65,12 +65,21 @@ public class Baraja {
 		}
 	}
 	
+		
 	
-	
-	@Override
+
 	public String toString() {
 		return "Baraja [" + Arrays.toString(Cartas) + "]";
 	}
+
+	
+	
+		
+		
+			
+	
+		
+	
 	
 	
 	
