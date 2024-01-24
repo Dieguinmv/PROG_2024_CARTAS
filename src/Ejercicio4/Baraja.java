@@ -73,10 +73,38 @@ public class Baraja {
 	}
 
 	
+	public void voltearCarta(char valor, char palo) {
+		
+	}
+		
+	/**
+	 * Esta operacion busca una carta y devuelve el objeto carta que se encuntra en el vector
+	 * 
+	 * @param valor de la carta
+	 * @param palo de la carta
+	 * @return una Carta que esta en "Cartas[]"
+	 */
 	
+	
+	private Carta buscarCarta(char valor,char palo) {
 		
+		Carta devolver = null;
+		int i = 0;
+		boolean encontrado = false;
 		
+		while((i<Cartas.length) && (!encontrado)) {
 			
+			if(Cartas[i].getValor()== valor && Cartas[i].getPalo()==palo) {
+				encontrado = true;
+				devolver = Cartas[i];
+			}
+			
+			i++;
+		}
+		
+		return devolver;
+		
+	}
 	
 		
 	

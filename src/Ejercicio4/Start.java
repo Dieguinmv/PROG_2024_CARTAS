@@ -8,7 +8,7 @@ public class Start {
 		System.out.println(baraja);
 		
 		Carta carta = new Carta();
-		carta.voltear();
+		
 		
 		System.out.println("----------");
 		

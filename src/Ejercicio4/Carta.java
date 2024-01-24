@@ -8,18 +8,6 @@ public class Carta {
 	
 	
 	
-
-	public Carta() {
-		
-		bocaArriba = false;
-	}
-
-	
-
-	
-	public void voltear() {
-		bocaArriba = !bocaArriba;
-	}
 	
 	@Override
 	public String toString() {
