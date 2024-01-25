@@ -9,8 +9,15 @@ public class Start {
 		
 		Carta carta = new Carta();
 		
-		baraja.voltearCarta('A', 'T');
 		
+		baraja.voltearCarta('A', 'C');
+		
+		
+		baraja.voltearCarta('2', 'C');
+		baraja.voltearCarta('5', 'C');
+		baraja.voltearCarta('6', 'C');
+		
+		System.out.println(baraja);
 		
 	}
 

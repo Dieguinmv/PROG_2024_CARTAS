@@ -66,17 +66,20 @@ public class Baraja {
 	}
 	
 		
-	
 
-	public String toString() {
-		return "Baraja [" + Arrays.toString(Cartas) + "]";
-	}
+
+	
 
 	
 	public void voltearCarta(char valor, char palo) {
 	
-		System.out.println(buscarCarta(valor,palo));
-		System.out.println(buscarIndiceCarta(valor,palo));
+
+		Carta carta = buscarCarta(valor,palo);
+		int posicion = buscarIndiceCarta(valor,palo);
+
+		carta.setBocaArriba(false);
+		Cartas[posicion].setBocaArriba(false);
+	
 		
 	}
 		
@@ -113,7 +116,7 @@ public class Baraja {
 		
 	}
 	
-private int buscarIndiceCarta(char valor,char palo) {
+	private int buscarIndiceCarta(char valor,char palo) {
 		
 		int devolver = -1;
 		int i = 0;
@@ -134,9 +137,23 @@ private int buscarIndiceCarta(char valor,char palo) {
 	}	
 	
 	
+	public void barajar() {
+		
+		Carta cartaAleatoria = null;
+		int posicion = (int)(Math.random()*52);
+		
+		for(int i =0;i<Cartas.length;i++) {
+			
+			Cartas[posicion] = cartaAleatoria;
+		}
+	}
+	
+
 	
 	
-	
+		public String toString() {
+			return "Baraja [" + Arrays.toString(Cartas) + "]";
+		}
 	
 		
 	}

@@ -4,9 +4,12 @@ public class Carta {
 	
 	private char valor;
 	private char palo;
-	private boolean bocaArriba= true;
+	private boolean bocaArriba;
 	
 	
+	public Carta() {
+		bocaArriba = true;
+	}
 	
 	
 	@Override
