@@ -7,9 +7,13 @@ public class Baraja {
 	private Carta Cartas[];
 	
 	
+	
+	
 	public Baraja() {
 		
 		Cartas = new Carta[52];
+		 
+		
 		
 		construirBaraja();
 			
@@ -138,16 +142,35 @@ public class Baraja {
 	
 	
 	public void barajar() {
-		
-		Carta cartaAleatoria = null;
-		int posicion = (int)(Math.random()*52);
-		
-		for(int i =0;i<Cartas.length;i++) {
+		 
+		int i = 0;
+		while(i<20) {
 			
-			Cartas[posicion] = cartaAleatoria;
+			int posicion1 = (int)(Math.random()*52);
+			int posicion2 = (int)(Math.random()*52);
+			
+			if(posicion1!=posicion2) {
+				intercambiar(posicion1,posicion2);
+				i++;
+			}
+			
 		}
+		
+		
+		 
+		 
 	}
 	
+	
+	private void intercambiar(int posicion1,int posicion2) {
+		
+		Carta temporal = Cartas[posicion1];
+		Cartas[posicion1] = Cartas[posicion2];
+		Cartas[posicion2] = temporal;
+		
+		
+		
+	}
 
 	
 	

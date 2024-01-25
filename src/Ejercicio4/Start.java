@@ -16,8 +16,11 @@ public class Start {
 		baraja.voltearCarta('2', 'C');
 		baraja.voltearCarta('5', 'C');
 		baraja.voltearCarta('6', 'C');
+		baraja.barajar();
 		
 		System.out.println(baraja);
+		
+		
 		
 	}
 
